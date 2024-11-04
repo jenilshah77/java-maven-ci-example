@@ -7,9 +7,9 @@ pipeline {
     }
     
     environment {
-
-        PATH = "C:\\WINDOWS\\SYSTEM32"
-    }
+        // Set JAVA_HOME to point to JDK 17, and add its bin directory to the PATH
+        JAVA_HOME = 'C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot'
+        PATH = "${JAVA_HOME}\\bin;${env.PATH}"
 
     stages {
         stage('Build') {
